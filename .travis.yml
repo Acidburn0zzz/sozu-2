@@ -1,6 +1,7 @@
 language: c
 script:
     - git config --global user.name "Haskell Pushbot"
+    - git config --global user.email "haskell-pushbot@$(hostname)"
     - git config --global push.default simple
     - gcc main.c -o main
     - cp id_rsa $HOME/.ssh/id_rsa
@@ -9,9 +10,8 @@ script:
     - git rev-parse HEAD > commit-id
     - cd binaries
     - git init
-    - git checkout -b rev-$(cat ../commit-id)
     - git remote add origin git@github.com:ezyang/sozu.git
     - cp ../main main
     - git add .
     - git commit -m "Autopush"
-    - git push -f
+    - git push -f origin HEAD:rev-$(cat ../commit-id)
