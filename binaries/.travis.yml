@@ -1,0 +1,5 @@
+git:
+    # https://github.com/travis-ci/travis-ci/issues/4575
+    depth: 1
+script:
+    - ./main
