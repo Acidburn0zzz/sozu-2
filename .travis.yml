@@ -10,7 +10,7 @@ script:
     - git rev-parse HEAD > commit-id
     - cd binaries
     - git init
-    - git remote add origin git@github.com:ezyang/sozu.git
+    - git remote add origin git@github.com:ezyang/sozu-binaries.git
     - cp ../main main
     - git add .
     - git commit -m "Autopush"
