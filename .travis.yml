@@ -1,13 +1,14 @@
 language: c
 script:
+    - git config --global user.name "Haskell Pushbot"
     - gcc main.c -o main
     - cp id_rsa $HOME/.ssh/id_rsa
     - mkdir binaries
-    - cd binaries
     - git rev-parse HEAD > commit-id
+    - cd binaries
     - git init
     - git checkout -b rev-$(cat ../commit-id)
-    - git remote set-url origin git@github.com:ezyang/sozu.git
+    - git remote add origin git@github.com:ezyang/sozu.git
     - cp ../main main
     - git add .
     - git commit -m "Autopush"
