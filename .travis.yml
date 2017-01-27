@@ -1,8 +1,10 @@
 language: c
 script:
     - git config --global user.name "Haskell Pushbot"
+    - git config --global push.default simple
     - gcc main.c -o main
     - cp id_rsa $HOME/.ssh/id_rsa
+    - chmod 0600 $HOME/.ssh/id_rsa
     - mkdir binaries
     - git rev-parse HEAD > commit-id
     - cd binaries
