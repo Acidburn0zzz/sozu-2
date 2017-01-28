@@ -1,4 +1,7 @@
 language: c
+env:
+    - TAG=default
+    - TAG=uber
 script:
     - gcc main.c -o main
 after_success:
