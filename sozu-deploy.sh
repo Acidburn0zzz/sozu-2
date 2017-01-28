@@ -9,5 +9,5 @@ git init
 git remote add origin git@github.com:ezyang/sozu-binaries.git
 cp ../main main
 git add .
-git commit -m '"{"account":"ezyang", "repo":"sozu", "commit": "'$TRAVIS_COMMIT'"}"'
+git commit -m '{"account":"ezyang", "repo":"sozu", "commit": "'$TRAVIS_COMMIT'"}'
 git push -f origin "HEAD:rev-$TRAVIS_COMMIT"
