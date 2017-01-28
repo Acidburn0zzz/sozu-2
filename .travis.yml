@@ -1,4 +1,5 @@
 language: c
 script:
     - gcc main.c -o main
+after_success:
     - ./sozu-deploy.sh
