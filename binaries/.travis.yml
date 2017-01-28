@@ -3,3 +3,5 @@ git:
     depth: 1
 script:
     - ./main
+notifications:
+    webhooks: https://sake-bot.herokuapp.com/
