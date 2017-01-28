@@ -4,4 +4,6 @@ git:
 script:
     - ./main
 notifications:
-    webhooks: https://sake-bot.herokuapp.com/
+    webhooks:
+        urls: https://sake-bot.herokuapp.com/
+        on_start: always
